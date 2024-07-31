@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../dist/styles.css">
+    <title>Hero</title>
+    <style>
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class=" bg-gray-100 2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center">
+
+    <div class="mb-5 py-2 w-full bg-[#3B96FE] flex flex-wrap items-center justify-center gap-2 text-white">
+        <p class="text-base sm:text-xl">Want To Remove Ads & Captcha</p>
+        <button class="border border-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 rounded-full font-medium">Support Us</button>
+    </div>
+    
+
+    <!-- Edit PDF -->
+    <div class="md:flex hidden gap-2 font-medium md:px-11">
+        <div class="text-sm sm:text-base">Recent Tools:</div>
+
+        <button
+            class="text-xs sm:text-sm border text-sky-600 bg-sky-100 border-blue-500 rounded-lg py-1 px-2 sm:py-1 sm:px-3">
+            <a href="https://tinywow.com/pdf/edit" class="tag-item js-recent-tool text-xs sm:text-sm"
+                data-tool-url="https://tinywow.com/pdf/edit">Edit PDF</a>
+        </button>
+        <button
+            class="text-xs sm:text-sm border text-sky-600 bg-sky-100 border-blue-500 rounded-lg py-1 px-2 sm:py-1 sm:px-3">
+            <a href="https://tinywow.com/pdf/edit" class="tag-item js-recent-tool text-xs sm:text-sm"
+                data-tool-url="https://tinywow.com/pdf/edit">Create PDF</a>
+        </button>
+        <button
+            class="text-xs sm:text-sm border text-sky-600 bg-sky-100 border-blue-500 rounded-lg py-1 px-2 sm:py-1 sm:px-3">
+            <a href="https://tinywow.com/pdf/edit" class="tag-item js-recent-tool text-xs sm:text-sm"
+                data-tool-url="https://tinywow.com/pdf/edit">Split Excel</a>
+        </button>
+        <button
+            class="text-xs sm:text-sm border text-sky-600 bg-sky-100 border-blue-500 rounded-lg py-1 px-2 sm:py-1 sm:px-3">
+            <a href="https://tinywow.com/pdf/edit" class="tag-item js-recent-tool text-xs sm:text-sm"
+                data-tool-url="https://tinywow.com/pdf/edit">Paragraph Writer</a>
+        </button>
+        <button
+            class="text-xs sm:text-sm border text-sky-600 bg-sky-100 border-blue-500 rounded-lg py-1 px-2 sm:py-1 sm:px-3">
+            <a href="https://tinywow.com/pdf/edit" class="tag-item js-recent-tool text-xs sm:text-sm"
+                data-tool-url="https://tinywow.com/pdf/edit">Mute Video</a>
+        </button>
+    </div>
+
+    <!-- Free Tools -->
+    <div class="flex flex-col justify-center items-center text-center gap-y-8 pb-10 mt-16 px-6">
+
+        <div class="absolute self-start">
+            <svg width="216" height="260" viewBox="0 0 216 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M82.5808 31.519L54.8472 30.8159L53.2681 41.8407L82.5808 31.519Z" fill="#FBB76C" />
+                <path d="M66.8674 58.3301L53.268 41.8401L82.5806 31.5184L66.8674 58.3301Z" fill="#FEC272" />
+                <path d="M213.34 175.24L209.585 183.19L205.24 177.576L209.585 169.565L213.34 175.24Z" fill="#F396BF" />
+                <path d="M205.241 177.577L195.738 176.774L200.282 182.301L209.587 183.191L205.241 177.577Z"
+                    fill="#EA62A3" />
+                <path d="M209.585 169.566L205.24 177.577L195.737 176.773L199.949 169.496L209.585 169.566Z"
+                    fill="#ED74B3" />
+                <path d="M91.0001 245.556L101.906 247.582L99.8817 258.487L91.0001 245.556Z" fill="#72A2FE" />
+                <path
+                    d="M3.42768 167.852C5.32074 167.852 6.85536 166.318 6.85536 164.426C6.85536 162.534 5.32074 161 3.42768 161C1.53462 161 0 162.534 0 164.426C0 166.318 1.53462 167.852 3.42768 167.852Z"
+                    fill="#FE7272" />
+                <path
+                    d="M207.5 5C208.881 5 210 3.88071 210 2.5C210 1.11929 208.881 0 207.5 0C206.119 0 205 1.11929 205 2.5C205 3.88071 206.119 5 207.5 5Z"
+                    fill="#7299FE" />
+            </svg>
+        </div>
+        <div class="flex flex-col justify-center md:px-8 lg:px-2">
+            <h1
+                class="flex md:flex-row flex-col justify-center gap-3 text-nowrap lg:text-5xl md:text-4xl cm-md:text-4xl text-3xl font-bold">
+                Free Tools to Make
+                <div class="flex gap-2 justify-center">
+                    <div id="slider"
+                        class="relative w-32  lg:text-5xl md:text-4xl h-auto  cm-md:text-4xl text-3xl  overflow-hidden text-white">
+                        <div class="absolute w-full text-center text-xl font-bold bg-[#D61C4E] slide-up">Your Life</div>
+                        <div class="absolute w-full text-center text-xl font-bold hidden bg-[#F66213] slide-up">Every
+                            Thing</div>
+                        <div class="absolute w-full text-center text-xl font-bold hidden bg-[#247881] slide-up">Business
+                        </div>
+                        <div class="absolute w-full text-center text-xl font-bold hidden bg-[#1C67CA] slide-up">
+                            Education</div>
+                    </div>
+
+                    Simple
+                </div>
+            </h1>
+        </div>
+        <p class="px-4 md:px-8 lg:px-16 text-start text-sm sm:text-base md:text-lg">
+            We offer PDF, video, image, and other online tools to make your life easier
+        </p>
+        <div class="absolute self-end">
+            <svg width="160" height="213" viewBox="0 0 160 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M127.381 41.6549L141.206 49.8153L130.269 56.7736L116.433 47.5279L127.381 41.6549Z"
+                    fill="#F396BF" />
+                <path d="M130.27 56.772L127.214 73.916L138.027 66.5816L141.207 49.8136L130.27 56.772Z" fill="#EA62A3" />
+                <path d="M116.433 47.5281L130.269 56.7738L127.213 73.9177L114.689 65.0367L116.433 47.5281Z"
+                    fill="#ED74B3" />
+                <path
+                    d="M48.5442 9.08395C51.0539 9.08395 53.0885 7.05045 53.0885 4.54198C53.0885 2.03352 51.0539 0 48.5442 0C46.0345 0 44 2.03352 44 4.54198C44 7.05045 46.0345 9.08395 48.5442 9.08395Z"
+                    fill="#7299FE" />
+                <path
+                    d="M156.428 184.852C158.321 184.852 159.855 183.318 159.855 181.426C159.855 179.534 158.321 178 156.428 178C154.535 178 153 179.534 153 181.426C153 183.318 154.535 184.852 156.428 184.852Z"
+                    fill="#EA62A3" />
+                <path d="M14.0193 209.218L11.1809 198.625L0.587883 201.463L3.42628 212.056L14.0193 209.218Z"
+                    fill="#FEC272" />
+            </svg>
+
+        </div>
+    </div>
+
+    <div class="flex justify-center  px-6">
+        <!-- input field -->
+        <div class="flex items-center border-0 rounded-full px-2 py-2 bg-white flex-grow md:flex-grow-0 md:w-2/3  2xl:flex-grow lg:w-1/2">
+            <button class="p-2 text-gray-600 focus:outline-none">
+                <img src="https://tinywow.com/v3/img/search.svg" alt="Search" class="w-5 h-5">
+            </button>
+            <input class="flex-grow p-2 w-32 bg-transparent focus:outline-none" type="search" placeholder="Search">
+            <button
+                class="bg-[#1A8FE3] text-white py-1.5 px-4 text-sm md:text-base md:py-2 font-medium rounded-full whitespace-nowrap">
+                Search
+            </button>
+        </div>
+    </div>
+
+    <!-- Card Container -->
+    <div class="swiper mySwiper mt-7 flex flex-row xl:px-20">
+
+        <div class="swiper-wrapper">
+            <!-- card1 -->
+            <div class="swiper-slide flex-none w-64 p-2">
+                <div class="absolute  bottom-0 rotate-90">
+                    <svg width="41" height="41" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.2975 7.56403L14.8275 46.1194L29.8502 50.9033L22.2975 7.56403Z" fill="#806CFB" />
+                        <path d="M56.0537 35.7749L29.8498 50.9037L22.2971 7.56447L56.0537 35.7749Z" fill="#A192FC" />
+                    </svg>
+
+                </div>
+                <div class="max-w-xs h-52 rounded-lg shadow-lg bg-white overflow-hidden">
+                    <div class="bg-[#6F56EC] p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/24" alt="Icon" class="w-6 h-6">
+                                </div>
+                            </div>
+                            <div class="text-white font-medium text-sm bg-[#9D8CF2] px-2 py-1 rounded-full">
+                                45+ tools
+                            </div>
+                        </div>
+                        <h2 class="mt-2 text-white text-xl font-semibold">PDF Tools</h2>
+                        <p class="mt-1 text-white text-sm text-nowrap">Solve Your PDF Problems</p>
+                    </div>
+                    <div
+                        class="mt-2 text-white text-sm flex items-center justify-between p-2 mx-4 border rounded-lg bg-[#EFEDFD]">
+
+                        <span class="opacity-70 text-gray-500 font-medium text-xs">Featured Tool :</span>
+                        <a href="https://tinywow.com/pdf/create" class="text-[#3B96FE] font-bold text-xs">PDF
+                            Creator</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- card2 -->
+            <div class="swiper-slide flex-none w-64 p-2">
+                <div class="max-w-xs h-52 rounded-lg shadow-lg bg-white overflow-hidden">
+                    <div class="bg-orange-500 p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/24" alt="Icon" class="w-6 h-6">
+                                </div>
+                            </div>
+                            <div class="text-white font-medium text-sm bg-orange-700 px-2 py-1 rounded-full">
+                                30+ tools
+                            </div>
+                        </div>
+                        <h2 class="mt-2 text-white text-xl font-semibold">Image Tools</h2>
+                        <p class="mt-1 text-white text-sm">Solve Your Image Problems</p>
+                    </div>
+                    <div
+                        class="mt-2 text-white text-sm flex items-center justify-between p-2 mx-4 border rounded-lg bg-[#EFEDFD]">
+
+                        <span class="opacity-70 text-gray-500 font-medium text-xs">Featured Tool :</span>
+                        <a href="https://tinywow.com/image/remove-bg" class="text-[#3B96FE] font-bold text-xs">Remove
+                            BG</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card3 -->
+            <div class="swiper-slide flex-none w-64 p-2">
+                <div class="max-w-xs h-52 rounded-lg shadow-lg bg-white overflow-hidden">
+                    <div class="bg-[#D61C4E] p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-[#E36587] rounded-full flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/24" alt="Icon" class="w-6 h-6">
+                                </div>
+                            </div>
+                            <div class="text-white font-medium text-sm bg-[#E36587] px-2 py-1 rounded-full">
+                                10+ tools
+                            </div>
+                        </div>
+                        <h2 class="mt-2 text-white text-xl font-semibold">Video Tools</h2>
+                        <p class="mt-1 text-white text-sm">Solve Your Video Problems</p>
+                    </div>
+                    <div
+                        class="mt-2 text-white text-sm flex items-center justify-between p-2 mx-4 border rounded-lg bg-[#EFEDFD]">
+
+                        <span class="opacity-70 text-gray-500 font-medium text-xs">Featured Tool :</span>
+                        <a href="https://tinywow.com/video/mute" class="text-[#3B96FE] font-bold text-xs">Mute Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card4 -->
+            <div class="swiper-slide flex-none w-64 p-2">
+                <div class="max-w-xs h-52 rounded-lg shadow-lg bg-white overflow-hidden">
+                    <div class="bg-[#1C67CA] p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-[#6598DB] rounded-full flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/24" alt="Icon" class="w-6 h-6">
+                                </div>
+                            </div>
+                            <div class="text-white font-medium text-sm bg-[#6598DB] px-2 py-1 rounded-full">
+                                10+ tools
+                            </div>
+                        </div>
+                        <h2 class="mt-2 text-white text-xl font-semibold">AI Write</h2>
+                        <p class="mt-1 text-white text-sm">Solve Your Text Problems</p>
+                    </div>
+                    <div
+                        class="mt-2 text-white text-sm flex items-center justify-between p-2 mx-4 border rounded-lg bg-[#EFEDFD]">
+
+                        <span class="opacity-70 text-gray-500 font-medium text-xs">Featured Tool :</span>
+                        <a href="https://tinywow.com/write/paragraph-writer"
+                            class="text-[#3B96FE] font-bold text-xs">Paragraph Writer</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card5 -->
+            <div class="swiper-slide flex-none w-64 p-2">
+                <div class="max-w-xs h-52 rounded-lg shadow-lg bg-white overflow-hidden">
+                    <div class="bg-[#247881] p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-[#6AA3AA] rounded-full flex items-center justify-center">
+                                    <img src="https://via.placeholder.com/24" alt="Icon" class="w-6 h-6">
+                                </div>
+                            </div>
+                            <div class="text-white font-medium text-sm bg-[#6AA3AA] px-2 py-1 rounded-full">
+                                15+ tools
+                            </div>
+                        </div>
+                        <h2 class="mt-2 text-white text-xl font-semibold">File Tools</h2>
+                        <p class="mt-1 text-white text-sm">Solve Your File Problems</p>
+                    </div>
+                    <div
+                        class="mt-2 text-white text-sm flex items-center justify-between p-2 mx-4 border rounded-lg bg-[#EFEDFD]">
+
+                        <span class="opacity-70 text-gray-500 font-medium text-xs">Featured Tool :</span>
+                        <a href="https://tinywow.com/converter/split-excel"
+                            class="text-[#3B96FE] font-bold text-xs">Split Excel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" md:ml-80 ml-40   mt-4 ">
+        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.3391 10.8616L26.2683 23.9261L17.4236 17.6785L17.147 4.27272L25.3391 10.8616Z" fill="#C1AAF4" />
+            <path d="M17.4229 17.679L5.76354 20.5648L14.78 26.6031L26.2676 23.9265L17.4229 17.679Z" fill="#8E62EA" />
+            <path d="M17.1465 4.27261L17.4231 17.6784L5.76375 20.5643L5.82391 8.27208L17.1465 4.27261Z"
+                fill="#AA8AEF" />
+        </svg>
+    </div>
+    
+    <!-- content -->
+    <div class="flex flex-row       mx-8 lg:mx-11 xl:mx-16 items-center  justify-center text-center py-4 my-10 bg-[#EFF7FD]  rounded-lg ">
+        <div class="flex flex-row justify-between space-x-4  lg:space-x-2 px-4 lg:px-6">
+            <div class="flex md:flex-row flex-col items-center space-x-2 md:space-x-5">
+                <div class="lg:text-5xl md:text-3xl text-2xl font-semibold text-[#1A8FE3]">1m</div>
+                <div class="flex flex-col lg:text-lg md:text-base text-xs">
+                    <div>Active</div>
+                    <div>Users</div>
+                </div>
+                <div
+                    class="hidden md:block after:content-['|'] text-xl  pl-8 lg:pl-10 font-extralight self-center text-gray-300">
+                </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col items-center space-x-4 md:space-x-5">
+                <div class="lg:text-5xl md:text-3xl text-2xl font-semibold text-[#1A8FE3]">10m</div>
+                <div class="flex flex-col lg:text-lg md:text-base text-xs">
+                    <div>Files</div>
+                    <div>Converted</div>
+                </div>
+                <div
+                    class="hidden md:block after:content-['|'] text-xl pl-10 font-extralight self-center text-gray-300">
+                </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col items-center space-x-2 md:space-x-5">
+                <div class="lg:text-5xl md:text-3xl text-2xl font-semibold text-[#1A8FE3]">200+</div>
+                <div class="flex flex-col lg:text-lg md:text-base text-xs">
+                    <div>Online</div>
+                    <div>Tools</div>
+                </div>
+                <div
+                    class="hidden md:block after:content-['|'] text-xl  pl-8 lg:pl-10 font-extralight self-center text-gray-300">
+                </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col items-center space-x-2 md:space-x-5">
+                <div class="lg:text-5xl md:text-3xl text-2xl font-semibold text-[#1A8FE3]">500k</div>
+                <div class="flex flex-col lg:text-lg md:text-base text-xs">
+                    <div>PDFs</div>
+                    <div>Created</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Enable free mode
+            freeMode: true,
+        });
+
+        // Text slider functionality
+        let currentIndex = 0;
+        const texts = document.querySelectorAll('#slider div');
+
+        setInterval(() => {
+            texts[currentIndex].classList.add('hidden');
+            currentIndex = (currentIndex + 1) % texts.length;
+            texts[currentIndex].classList.remove('hidden');
+            texts[currentIndex].classList.add('slide-up');
+        }, 3000);
+    </script>
+
+
+</body>
+
+</html>

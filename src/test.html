@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Text Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div id="slider" class="relative w-64 h-16 overflow-hidden">
+        <div class="absolute w-full text-center text-xl font-bold slide-up">First Text</div>
+        <div class="absolute w-full text-center text-xl font-bold hidden slide-up">Second Text</div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const texts = document.querySelectorAll('#slider div');
+        
+        setInterval(() => {
+            texts[currentIndex].classList.add('hidden');
+            currentIndex = (currentIndex + 1) % texts.length;
+            texts[currentIndex].classList.remove('hidden');
+            texts[currentIndex].classList.add('slide-up');
+        }, 3000);
+    </script>
+</body>
+</html>
